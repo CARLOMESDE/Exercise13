@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mil-an National Highschool</title>
+    <link rel= "stylesheet" href="Exersice13/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Exersice13/images/LOGO.ico"/>
+</head>
+<body class="head">
+    <div class="logo" >
+        <a href=""><img src="Exersice13/images/LOGO.png"  width="120" height="120"></a>
+    </div>
+    <div class = "nav">
+        <ul>
+            <li>HOME</li>
+            <li>Courses
+                <ul class="dropdown">
+                    <li>TVL</li>
+                    <li>GAS</li>
+                    <li>HUMMS</li>
+                    <li>STEM</li>
+                    <li>ABM</li>
+                </ul>
+            <li>Acadamics
+                <ul class="dropdown">
+                    <li>TVL</li>
+                    <li>GAS</li>
+                    <li>HUMMS</li>
+                    </ul>
+            <li>Guidance</li>
+            </li>
+        </ul>
+        <div class = "banner">
+            <p>MIL-AN NATIONAL HIGHSCHOOL</p>
+        </div>
+<div class="main">
+    <div class="slideshow-container">
+      <div class="mySlides1">
+        <img src="Exersice13/images/Tokhang.jpg" style="width:630px">
+      </div>
+    
+      <div class="mySlides1">
+        <img src="Exersice13/images/drills.jpg" style="width:630px">
+      </div>
+    
+      <div class="mySlides1">
+        <img src="Exersice13/images/barangay.jpg" style="width:630px">
+      </div>
+      <div class="mySlides1">
+        <img src="Exersice13/images/Tokhang.jpg" style="width:630px">
+      </div>
+      <div class="mySlides1">
+        <img src="Exersice13/images/barangay.jpg" style="width:630px">
+      </div><div class="mySlides1">
+        <img src="Exersice13/images/drill2.jpg" style="width:630px">
+      </div>
+    
+      <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+    </div>
+    <script>
+    var slideIndex = [1,1];
+    var slideId = ["mySlides1"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+    
+    function showSlides(n, no) {
+      var i;
+      var x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
+    </script>
+
+        <div class="text"><img src="Exersice13/images/2.jpg" alt="2" style="width:400px;height:250px;margin-right:15px;"><br>
+        Mil-an National Highschool cooperate with Police Station 5 for sending modules to their students.
+         The police station 5 deliver the modules to the students houses to make sure that the students are safe.</div>
+    
+        <div class="text2">
+          School Number:09496600434<br>
+          <br>
+          Address:#1 Loakan Proper 2600 Baguio City, Philippines<br>
+        </div>
+       
+
+      <div class="textimg">
+        <p><img src="Exersice13/images/school1.jpg" alt="school1" style="width:190px;height:150px;margin-right:15px;">
+          <br>Formerly known as BCNHS - Loakan Annex but signed as an independent school by former President Gloria Macapagal - Arroyo last December 31, 2009.<br>
+          A school offering a lot of academic and non-academic activities which develop the talents of it's students.</p>
+
+      </div>
+      <div class="calendar">
+  <center>
+  <script language="javascript" type="text/javascript">
+  var day_of_week = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
+  var month_of_year = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+  
+
+  var Calendar = new Date();
+  
+  var year = Calendar.getFullYear();    
+  var month = Calendar.getMonth();    
+  var today = Calendar.getDate();    
+  var weekday = Calendar.getDay();    
+  
+  var DAYS_OF_WEEK = 7;    
+  var DAYS_OF_MONTH = 31;   
+  var cal;    
+  Calendar.setDate(1);    
+  Calendar.setMonth(month);    
+  
+
+  
+  var TR_start = '<TR>';
+  var TR_end = '</TR>';
+  var highlight_start = '<TD WIDTH="30"><TABLE CELLSPACING=0 BORDER=1 BGCOLOR=DEDEFF BORDERCOLOR=CCCCCC><TR><TD WIDTH=20><B><CENTER>';
+  var highlight_end   = '</CENTER></TD></TR></TABLE></B>';
+  var TD_start = '<TD WIDTH="30"><CENTER>';
+  var TD_end = '</CENTER></TD>';
+  
+
+  cal =  '<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 BORDERCOLOR=BBBBBB><TR><TD>';
+  cal += '<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2>' + TR_start;
+  cal += '<TD COLSPAN="' + DAYS_OF_WEEK + '" BGCOLOR="#EFEFEF"><CENTER><B>';
+  cal += month_of_year[month]  + '   ' + year + '</B>' + TD_end + TR_end;
+  cal += TR_start;
+  
+
+  
+
+  for(index=0; index < DAYS_OF_WEEK; index++)
+  {
+  
+
+  if(weekday == index)
+  cal += TD_start + '<B>' + day_of_week[index] + '</B>' + TD_end;
+  
+
+  else
+  cal += TD_start + day_of_week[index] + TD_end;
+  }
+  
+  cal += TD_end + TR_end;
+  cal += TR_start;
+  
+
+  for(index=0; index < Calendar.getDay(); index++)
+  cal += TD_start + '  ' + TD_end;
+  
+
+  for(index=0; index < DAYS_OF_MONTH; index++)
+  {
+  if( Calendar.getDate() > index )
+  {
+
+    week_day =Calendar.getDay();
+  
+
+    if(week_day == 0)
+    cal += TR_start;
+  
+    if(week_day != DAYS_OF_WEEK)
+    {
+  
+
+    var day  = Calendar.getDate();
+  
+
+    if( today==Calendar.getDate() )
+    cal += highlight_start + day + highlight_end + TD_end;
+  
+   
+    else
+    cal += TD_start + day + TD_end;
+    }
+  
+
+    if(week_day == DAYS_OF_WEEK)
+    cal += TR_end;
+    }
+
+    Calendar.setDate(Calendar.getDate()+1);
+  
+  }
+  
+  cal += '</TD></TR></TABLE></TABLE>';
+  
+  
+  document.write(cal);
+
+  </script>
+  </center>
+</div>
+<div class="parag">
+Recent Activities
+</div>
+      <div class="slide" style="max-width:400px">
+        <img class="mySlides" src="Exersice13/images/recent1.jpg" style="width:80%">
+        <img class="mySlides" src="Exersice13/images/recent2.jpg" style="width:80%">
+        <img class="mySlides" src="Exersice13/images/recent3.jpg" style="width:80%">
+        <img class="mySlides" src="Exersice13/images/recent4.jpg" style="width:80%">
+      </div>
+
+
+    <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); 
+      }
+      </script>
+      </div>
+</body>
+</html>
